@@ -55,3 +55,34 @@ btnEjercicio3.addEventListener("click", function() {
     }
 
 })
+
+const btnEjercicio34 = document.getElementById("btnEjercicio34");
+const container = document.getElementById("container");
+
+btnEjercicio34.addEventListener("click", function() {
+    
+    container.innerHTML = "";
+
+    let multiplicando = 1;
+    
+    for(multiplicando; multiplicando <= 9; multiplicando++) {
+        const card = document.createElement("div");
+        const title = document.createElement("h2");
+
+        card.className = "w-full h-auto p-2 flex flex-col items-center justify-center border-2 rounded-2xl relative pt-7 shadow-lg";
+        title.className = "text-center absolute top-[-14px] w-auto bg-blue-600 text-white px-4 rounded-lg shadow-lg";
+        title.textContent = `Tabla del ${multiplicando}`;
+
+        card.appendChild(title);
+
+        let multiplicador = 0;
+        for(multiplicador; multiplicador <= 12; multiplicador++) {
+            let producto = multiplicando * multiplicador;
+            const p = document.createElement("p");
+            p.textContent = `${multiplicando} X ${multiplicador} = ${producto}`;
+            card.appendChild(p);
+        }
+
+        container.appendChild(card);
+    }
+})
