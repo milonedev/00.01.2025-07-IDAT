@@ -34,3 +34,24 @@ btnEjercicio2.addEventListener("click", function() {
     }
 
 })
+
+const inputEjercicio3 = document.getElementById("inputEjercicio3");
+const btnEjercicio3 = document.getElementById("btnEjercicio3");
+
+btnEjercicio3.addEventListener("click", function() {
+
+    let numero = Number(inputEjercicio3.value);
+
+    if(isNaN(numero)) {
+        alert('El numero ingresado es incorrecto.')
+    } else {
+        let valorAbsoluto = Math.abs(numero);
+
+        if(valorAbsoluto % 10 === 4) {
+            alert("El numero termina en 4.")
+        } else {
+            alert("El numero no termina en 4.")
+        }
+    }
+
+})
