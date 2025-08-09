@@ -42,8 +42,8 @@
     </style>
 </head>
 
-<body class="w-full h-auto min-h-screen grid place-content-center bg-black p-5">
-    <h1 class="uppercase text-6xl text-white font-bold text-center my-5">
+<body class="w-full h-auto min-h-screen grid place-content-center bg-black p-5 gap-15">
+    <h1 class="uppercase text-6xl text-white font-bold text-center">
         Hackaton 03
     </h1>
     <!-- CARDS -->
@@ -54,7 +54,7 @@
         <!-- container code -->
         <div class="py-5">
             <pre><code>
-<span class="keyword">let</span> numero = parseInt(<span class="function">prompt</span>(<span class="string">"Ingrese un número:"</span>), <span class="number">10</span>);
+<span class="keyword">let</span> numero = Number(<span class="function"></span><span class="">inputEjercicio1.value</span><span class="number"></span>);
 
 <span class="keyword">if</span> (isNaN(numero)) {
   console.log(<span class="string">"Debe ingresar un número válido."</span>);
@@ -77,6 +77,69 @@
                 class="bg-blue-600 text-white rounded-lg px-6 py-2 hover:cursor-pointer hover:bg-white hover:text-blue-600 border border-blue-600 transition-colors duration-300 ease-in-out hover:shadow-lg ">Enviar</button>
         </div>
     </div>
+
+<!-- CARDS -->
+    <div class="bg-white bg-white rounded-xs shadow-2xl shadow-white p-5">
+        <p>
+            2.- Hacer un algoritmo en JavaScript que lea un número entero por el teclado y determinar si es negativo.
+        </p>
+        <!-- container code -->
+        <div class="py-5">
+<pre><code>
+<span class="keyword">let</span> numero = Number(<span class="function"></span><span class="">inputEjercicio1.value</span><span class="number"></span>);
+
+<span class="keyword">if</span> (isNaN(numero)) {
+  console.log(<span class="string">"Debe ingresar un número válido."</span>);
+} <span class="keyword">else</span> {
+  <span class="keyword">if</span> (numero &gt; <span class="number">0</span>) {
+    console.log(<span class="string">"El numero No es negetivo."</span>);
+  } <span class="keyword">else</span> {
+    console.log(<span class="string">"El numero es negetivo."</span>);
+  }
+}
+  </code></pre>
+        </div>
+        <div class="flex flex-row gap-10 items-center justify-center">
+            <input type="text" id="inputEjercicio2"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 "
+                placeholder="Ingrese numero entero:" required />
+
+            <button id="btnEjercicio2"
+                class="bg-blue-600 text-white rounded-lg px-6 py-2 hover:cursor-pointer hover:bg-white hover:text-blue-600 border border-blue-600 transition-colors duration-300 ease-in-out hover:shadow-lg ">Enviar</button>
+        </div>
+    </div>
+  
+    <!-- CARDS -->
+    <div class="bg-white bg-white rounded-xs shadow-2xl shadow-white p-5">
+        <p>
+            2.- Hacer un algoritmo en JavaScript que lea un número entero por el teclado y determinar si es negativo.
+        </p>
+        <!-- container code -->
+        <div class="py-5">
+<pre><code>
+<span class="keyword">let</span> numero = Number(<span class="function"></span><span class="">inputEjercicio1.value</span><span class="number"></span>);
+
+<span class="keyword">if</span> (isNaN(numero)) {
+  console.log(<span class="string">"Debe ingresar un número válido."</span>);
+} <span class="keyword">else</span> {
+  <span class="keyword">if</span> (numero &gt; <span class="number">0</span>) {
+    console.log(<span class="string">"El numero No es negetivo."</span>);
+  } <span class="keyword">else</span> {
+    console.log(<span class="string">"El numero es negetivo."</span>);
+  }
+}
+  </code></pre>
+        </div>
+        <div class="flex flex-row gap-10 items-center justify-center">
+            <input type="text" id="inputEjercicio2"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 "
+                placeholder="Ingrese numero entero:" required />
+
+            <button id="btnEjercicio2"
+                class="bg-blue-600 text-white rounded-lg px-6 py-2 hover:cursor-pointer hover:bg-white hover:text-blue-600 border border-blue-600 transition-colors duration-300 ease-in-out hover:shadow-lg ">Enviar</button>
+        </div>
+    </div>
+    
 </body>
 <script src="/app.js"></script>
 
