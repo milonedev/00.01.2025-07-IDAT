@@ -57,6 +57,7 @@ btnEjercicio3.addEventListener("click", function() {
 })
 
 const btnEjercicio34 = document.getElementById("btnEjercicio34");
+const btnEjercicio342 = document.getElementById("btnEjercicio34_2");
 const container = document.getElementById("container");
 
 btnEjercicio34.addEventListener("click", function() {
@@ -85,4 +86,35 @@ btnEjercicio34.addEventListener("click", function() {
 
         container.appendChild(card);
     }
+})
+
+btnEjercicio342.addEventListener("click", function() {
+    container.innerHTML = "";
+});
+
+const inputEjercicio39 = document.getElementById("inputEjercicio39");
+const btnEjercicio39 = document.getElementById("btnEjercicio39");
+
+btnEjercicio39.addEventListener("click", function() {
+    let numero = Number(inputEjercicio39.value);
+    
+    if(isNaN(numero)) {
+        alert('El numero ingresado es incorrecto.')
+    } else {
+        
+        let pi = 0;
+
+        for(let i = 0; i< numero; i++) {
+            let denominador = 2 * i + 1;
+            let term = 4 / denominador;
+            if (i % 2 === 0) {
+                pi += term;
+            } else {
+                pi -= term;
+            }
+        }
+
+        alert(`La aproximacion de pi es: ${pi}`)
+    }
+
 })

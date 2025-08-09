@@ -84,7 +84,7 @@
             2.- Hacer un algoritmo en JavaScript que lea un número entero por el teclado y determinar si es negativo.
         </p>
 
-        
+
         <!-- container code -->
         <div class="py-5">
             <pre><code>
@@ -149,7 +149,7 @@
             34.- Hacer un algoritmo en JavaScript que imprima la tabla de multiplicar de los números del uno al nueve.
         </p>
 
-        <div class="py-5">
+        <div class="py-5 max-w-[480px]">
             <pre><code>
 <span class="keyword">let</span> multiplicando = <span class="number">1</span>;
 
@@ -165,12 +165,52 @@
         </div>
 
         <!-- container code -->
-        <div id="container"  class="container grid grid-cols-3 gap-6 p-4 pt-7 transition-all duration-300 ease-in-out">
+        <div id="container" class="container grid grid-cols-3 gap-6 p-4 pt-7 transition-all duration-300 ease-in-out">
         </div>
         <div class="flex flex-row gap-10 items-center justify-center">
 
             <button id="btnEjercicio34"
                 class="bg-blue-600 text-white rounded-lg px-6 py-2 hover:cursor-pointer hover:bg-white hover:text-blue-600 border border-blue-600 transition-colors duration-300 ease-in-out hover:shadow-lg ">Generar</button>
+
+            <button id="btnEjercicio34_2"
+                class="bg-blue-600 text-white rounded-lg px-6 py-2 hover:cursor-pointer hover:bg-white hover:text-blue-600 border border-blue-600 transition-colors duration-300 ease-in-out hover:shadow-lg ">Limpiar</button>
+        </div>
+    </div>
+
+    <!-- CARDS -->
+    <div class="bg-white bg-white rounded-xs shadow-2xl shadow-white p-5">
+        <p>
+            39.- Hacer un algoritmo en JavaScript que cumpla con la aproximación del número pi con la serie de
+            Gregory-Leibniz. La formula que se debe aplicar es:
+            <br />
+            Pi = (4/1) - (4/3) + (4/5) - (4/7) + (4/9) - (4/11) + (4/13) - (4/15) ...
+        </p>
+
+        <div class="py-5">
+            <pre><code>
+<span class="keyword">let</span> pi = <span class="number">0</span>;
+
+<span class="keyword">for</span> (let i = 0; numero &lt;= 9; i++ ) {
+    <span class="keyword">let</span> denominador = <span class="number">0</span>;
+    <span class="keyword">let</span> term = <span class="number">4</span> / denominador;
+    <span class="keyword">if</span> (i % 2 === 0) {
+        <span class="keyword"></span> pi += <span class="number">term</span>;
+    } <span class="keyword">else</span> {
+        <span class="keyword"></span> pi -= <span class="number">term</span>;
+    }
+    <span class="keyword">alert</span>(`La aproximacion de pi es: ${pi}`)
+}
+  </code></pre>
+        </div>
+
+        <div class="flex flex-row gap-10 items-center justify-center">
+
+            <input type="text" id="inputEjercicio39"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 "
+                placeholder="Ingrese numero entero:" required />
+
+            <button id="btnEjercicio39"
+                class="bg-blue-600 text-white rounded-lg px-6 py-2 hover:cursor-pointer hover:bg-white hover:text-blue-600 border border-blue-600 transition-colors duration-300 ease-in-out hover:shadow-lg ">Calcular</button>
         </div>
     </div>
 
