@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import PlaybackControls from "./components/PlaybackControls";
 import { Outlet } from "react-router-dom";
 import AudioPlayer from "./components/AudioPlayer";
+import FriendsActivity from "./components/FriendsActivity";
 
 const MainLayout = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -59,10 +60,10 @@ const MainLayout = () => {
               collapsedSize={0}
             >
               {/* Activities */}
+              <FriendsActivity />
             </ResizablePanel>
           </>
         )}
-
       </ResizablePanelGroup>
 
       {/* Pkay back controllers */}

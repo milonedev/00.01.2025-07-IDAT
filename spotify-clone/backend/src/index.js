@@ -8,12 +8,17 @@ import fileUpload from "express-fileupload";
 import path from "path";
 import cron from "node-cron";
 import fs from "fs";
+import { createServer } from 'http';
+import { initializeSocket } from './lib/socket.js';
 
 connectDB();
 
 const app = express();
 const port = process.env.PORT || 3002;
 const __dirname = path.resolve();
+
+const httpServer = createServer(app)
+initializeSocket(httpServer)
 
 app.use(
 	cors({
@@ -65,6 +70,6 @@ app.use((err, req, res, next) => {
     res.status(500).json({ message: process.env.NODE_ENV === "production" ? "Internal server error" : err.message });
 });
 
-app.listen(port, () => {
+httpServer.listen(port, () => {
   console.log(`The server is running on http://localhost:${port}`);
 });
